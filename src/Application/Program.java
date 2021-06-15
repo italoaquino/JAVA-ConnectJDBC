@@ -2,6 +2,8 @@ package Application;
 
 import java.sql.Date;
 
+import Model.dao.DaoFactory;
+import Model.dao.SellerDao;
 import Model.entities.Department;
 import Model.entities.Seller;
 
@@ -9,12 +11,10 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		Department obj = new Department(1, "books");
-
-		Seller seller = new Seller(21, "bob", "boob@gmail.com", new Date(1), 2000.0 , obj);
-
+		SellerDao sellerdao = DaoFactory.createSellerDao();
 		
-		System.out.println(obj);
+		Seller seller = sellerdao.findById(1);
+		
 		System.out.println(seller);
 	}
 	
