@@ -2,6 +2,7 @@ package Model.dao;
 
 import java.util.List;
 
+
 import Model.entities.Seller;
 
 public interface SellerDao {
