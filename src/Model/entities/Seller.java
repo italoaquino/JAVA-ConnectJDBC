@@ -1,7 +1,8 @@
 package Model.entities;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
+
 
 public class Seller implements Serializable {
 
@@ -11,23 +12,23 @@ public class Seller implements Serializable {
 	private Integer id;
 	private String name;
 	private String email;
-	private Date Birth;
+	private Date birthDate;
 	private Double baseSalary;
 	private Department department;
 	
 	public Seller() {
-		
 	}
-
-	public Seller(Integer id, String name, String email, Date birth, Double baseSalary, Department department) {
+	
+	public Seller(Integer id, String name, String email, Date birthDate, Double baseSalary, Department department) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
-		Birth = birth;
+		this.birthDate = birthDate;
 		this.baseSalary = baseSalary;
 		this.department = department;
 	}
 
+	
 
 	public int getId() {
 		return id;
@@ -53,16 +54,13 @@ public class Seller implements Serializable {
 		this.email = email;
 	}
 
-
-	public Date getBirth() {
-		return Birth;
+	public Date getBirthDate() {
+		return birthDate;
 	}
 
-
-	public void setBirth(Date birth) {
-		Birth = birth;
+	public void setBirthDate(Date birthDate) {
+		this.birthDate = birthDate;
 	}
-
 
 	public Double getBaseSalary() {
 		return baseSalary;
@@ -105,7 +103,7 @@ public class Seller implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Seller [id=" + id + ", name=" + name + ", email=" + email + ", Birth=" + Birth + ", baseSalary="
+		return "Seller [id=" + id + ", name=" + name + ", email=" + email + ", Birth=" + birthDate + ", baseSalary="
 				+ baseSalary + ", department=" + department + "]";
 	}
 
