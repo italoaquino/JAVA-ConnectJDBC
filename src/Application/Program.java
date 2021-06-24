@@ -1,6 +1,6 @@
 package Application;
 
-import java.util.Date;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -15,6 +15,7 @@ public class Program {
 
 	public static void main(String[] args) {
 	
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		
 		SellerDao sellerDao = DaoFactory.createSellerDao();

@@ -16,8 +16,10 @@ public class Seller implements Serializable {
 	private Double baseSalary;
 	private Department department;
 	
+	
 	public Seller() {
 	}
+	
 	
 	public Seller(Integer id, String name, String email, Date birthDate, Double baseSalary, Department department) {
 		this.id = id;
@@ -27,41 +29,40 @@ public class Seller implements Serializable {
 		this.baseSalary = baseSalary;
 		this.department = department;
 	}
-
 	
-
+	
 	public int getId() {
 		return id;
 	}
-
+	
 	public void setId(int id) {
 		this.id = id;
 	}
-
+	
 	public String getName() {
 		return name;
 	}
-
+	
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	
 	public String getEmail() {
 		return email;
 	}
-
+	
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
+	
 	public Date getBirthDate() {
 		return birthDate;
 	}
-
+	
 	public void setBirthDate(Date birthDate) {
 		this.birthDate = birthDate;
 	}
-
+	
 	public Double getBaseSalary() {
 		return baseSalary;
 	}
@@ -69,15 +70,15 @@ public class Seller implements Serializable {
 	public void setBaseSalary(Double baseSalary) {
 		this.baseSalary = baseSalary;
 	}
-
+	
 	public Department getDepartment() {
 		return department;
 	}
-
+	
 	public void setDepartment(Department department) {
 		this.department = department;
 	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -85,7 +86,7 @@ public class Seller implements Serializable {
 		result = prime * result + id;
 		return result;
 	}
-
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -99,14 +100,14 @@ public class Seller implements Serializable {
 			return false;
 		return true;
 	}
-
-
+	
+	
 	@Override
 	public String toString() {
 		return "Seller [id=" + id + ", name=" + name + ", email=" + email + ", Birth=" + birthDate + ", baseSalary="
 				+ baseSalary + ", department=" + department + "]";
 	}
-
+	
 
 	
 	

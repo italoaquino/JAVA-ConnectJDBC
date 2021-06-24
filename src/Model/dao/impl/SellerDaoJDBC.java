@@ -93,12 +93,8 @@ public class SellerDaoJDBC implements SellerDao {
 		}
 	}		
 
-	@Override
-	public void insertId(Integer id) {
-		// TODO Auto-generated method stub
-		
-	}
 
+	
 	@Override
 	public Seller findById(Integer id) {
 		PreparedStatement st = null;
@@ -247,13 +243,20 @@ public class SellerDaoJDBC implements SellerDao {
 					+ " WHERE Id = ?");
 			
 			st.setInt(1, id);
-			st.executeUpdate();
+			st.executeQuery();
 		}
 		catch(SQLException e) {
 			throw new DbException(e.getMessage());
 		}
 	 
 	
+		
+	}
+
+
+	@Override
+	public void insertId(Integer id) {
+		// TODO Auto-generated method stub
 		
 	}
 }
